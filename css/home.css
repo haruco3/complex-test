@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+	font-family: Segoe UI;
+}
+
+#mainbox {
+	/*position: absolute;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;*/
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	background-color: #36C;
+	border-radius: 20px;
+	padding-top: 1px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 10px;
+	box-shadow: 2px 2px 0px black;
+}
+
+body {
+	background-image: url(../images/mathbg.jpg);
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+.sqrt {
+	text-decoration:overline;
+}
+
+td {
+    border: 1px solid white;
+}

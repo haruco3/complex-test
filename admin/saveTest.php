@@ -82,7 +82,7 @@
 			else
 			{
 				// If the admin has not set a test name, redirect back with an error
-				header('Location: createTest.php?error=1');
+				header('Location: admin/createTest.php?error=1');
 			}
 		}
 
@@ -114,7 +114,7 @@
 					// If the user is creating a new test
 					if($x[1] == "" or $x[2] == "")
 					{
-						header('Location: createTest.php?error=2');
+						header('Location: admin/createTest.php?error=2');
 						// Redirect back with an error if the user has forgotten to fill in a question or answer
 					}
 					else
@@ -165,7 +165,7 @@
 	$conn->close();
 ?>
 <br />
-<p><a href="adminManage.php">Return</a></p>
+<p><a href="admin/adminManage.php">Return</a></p>
 </div>
 </body>
 </html>

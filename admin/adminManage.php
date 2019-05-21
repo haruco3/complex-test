@@ -52,9 +52,9 @@
 		$sql->bind_result($testID, $testName);
 		// Bind the results to variables
 		echo('<p>Please choose a test to edit:</p>');
-		echo('<form action="editTest.php" method="GET">');
+		echo('<form action="admin/editTest.php" method="GET">');
 		echo('<select name="testSelection">');
-		// Prints a dropdown menu in a form which will send the test to be edited to editTest.php
+		// Prints a dropdown menu in a form which will send the test to be edited to admin/editTest.php
 		while ($sql->fetch())
 		{
 			echo('<option value="' .  $testID . '">' . $testName . '</option>');
@@ -72,7 +72,7 @@
 	// Closes database connection
 ?>
 <br />
-<p><a href="adminHome.php">Return</a></p>
+<p><a href="admin/adminHome.php">Return</a></p>
 </div>
 </body>
 </html>

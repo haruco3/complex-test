@@ -39,11 +39,11 @@
 	echo("<h1>Welcome, " . $_SESSION['name'] . "!</h1>");
 	// Displays a welcome message to the user with the user's username
 ?>
-<p><a href="adminManage.php">Manage Tests</a></p>
-<p><a href="adminUsers.php">Manage Users</a></p>
-<p><a href="adminReview.php">Review Student Results</a></p>
-<p><a href="adminPerWeek.php">Set Tests per Week</a></p>
-<p><a href="backup.php">Backup</a></p>
+<p><a href="admin/adminManage.php">Manage Tests</a></p>
+<p><a href="admin/adminUsers.php">Manage Users</a></p>
+<p><a href="admin/adminReview.php">Review Student Results</a></p>
+<p><a href="admin/adminPerWeek.php">Set Tests per Week</a></p>
+<p><a href="admin/backup.php">Backup</a></p>
 <p><a href="logout.php">Logout</a></p>
 </div>
 </body>

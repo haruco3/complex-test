@@ -18,7 +18,7 @@
 	}
 	elseif ($_SESSION['isAdmin'] == 1)
 	{
-		header( 'Location: adminHome.php' );
+		header( 'Location: admin/adminHome.php' );
 		// Redirects to the admin home page if the user is an admin
 	}
 	elseif ($_SESSION['timeout'] + 60 * 60 < time())

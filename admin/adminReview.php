@@ -34,9 +34,9 @@
 
 <div id="mainbox">
 <h1>Review Student Results</h1>
-<p><a href="adminExamine.php">Examine Tests</a></p>
-<p><a href="adminSummary.php">Summary</a></p>
-<p><a href="adminHome.php">Return</a></p>
+<p><a href="admin/adminExamine.php">Examine Tests</a></p>
+<p><a href="admin/adminSummary.php">Summary</a></p>
+<p><a href="admin/adminHome.php">Return</a></p>
 </div>
 </body>
 </html>

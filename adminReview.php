@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Complex Numbers - Admin Home</title>
+<title>Complex Numbers - Admin - Review</title>
 <link href="css/home.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -29,22 +29,14 @@
 	{
 		$_SESSION['timeout'] = time();
 		// Resets the 'most recent activity' time
-		$userid = $_SESSION['userid'];
-		// Gets the ID of the current user and stores it as a local variable
 	}
 ?>
 
 <div id="mainbox">
-<?php
-	echo("<h1>Welcome, " . $_SESSION['name'] . "!</h1>");
-	// Displays a welcome message to the user with the user's username
-?>
-<p><a href="admin/adminManage.php">Manage Tests</a></p>
-<p><a href="admin/adminUsers.php">Manage Users</a></p>
-<p><a href="admin/adminReview.php">Review Student Results</a></p>
-<p><a href="admin/adminPerWeek.php">Set Tests per Week</a></p>
-<p><a href="admin/backup.php">Backup</a></p>
-<p><a href="logout.php">Logout</a></p>
+<h1>Review Student Results</h1>
+<p><a href="adminExamine.php">Examine Tests</a></p>
+<p><a href="adminSummary.php">Summary</a></p>
+<p><a href="adminHome.php">Return</a></p>
 </div>
 </body>
 </html>

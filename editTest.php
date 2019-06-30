@@ -45,7 +45,7 @@
 	{
 		// If user has chosen to create a test
 		echo('<p>How many questions would you like the test to have?</p>');
-		echo('<form action="admin/createTest.php" method="POST">');
+		echo('<form action="createTest.php" method="POST">');
 		echo('<input type="text" name="count" /><br />');
 		echo('<p><input type="submit" value="Submit" /></p>');
 		echo('</form>');
@@ -62,7 +62,7 @@
 		$sql->store_result();
 		$idArray = array();
 		// $idArray is an array of all the IDs of the questions that are being edited
-		echo('<form action="admin/saveTest.php?question_sum=' . ($sql->num_rows()) . '&test_id=' . $_GET['testSelection'] . '" method="POST">');
+		echo('<form action="saveTest.php?question_sum=' . ($sql->num_rows()) . '&test_id=' . $_GET['testSelection'] . '" method="POST">');
 		$x = 1;
 		// $x is the question number in the test
 		while($sql->fetch())
@@ -94,7 +94,7 @@
 	}
 	$conn->close();
 ?>
-<p><a href="admin/adminManage.php">Return</a></p>
+<p><a href="adminManage.php">Return</a></p>
 </div>
 </body>
 </html>

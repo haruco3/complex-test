@@ -56,7 +56,7 @@
 		}
 		else
 		{
-			header("Location: admin/editUser.php?action=Change+Password&userSelection=" . $_GET['user_id'] . "&match=false");
+			header("Location: editUser.php?action=Change+Password&userSelection=" . $_GET['user_id'] . "&match=false");
 			// If the user made a mistake in the 'confirm password' box, redirects back to the change password page with an error
 		}
 	}
@@ -98,7 +98,7 @@
 			$sql->close();
 			if ($unique == 0)
 			{
-				header("Location: admin/editUser.php?action=Create+User&error=1");
+				header("Location: editUser.php?action=Create+User&error=1");
 				// Prints an error if the username entered for the new user already exists in the database
 			}
 			else
@@ -127,7 +127,7 @@
 			{
 				echo('<p>Please enter the new password:');
 			}
-			echo('<form action="admin/editUser.php?change=true&user_id=' . $_GET['userSelection'] . '" method="POST">');
+			echo('<form action="editUser.php?change=true&user_id=' . $_GET['userSelection'] . '" method="POST">');
 			echo('<p>New Password: <input type="password" name="pass1" /></p>');
 			echo('<p>Confirm Password: <input type="password" name="pass2" /></p>');
 			// A form for the admin to enter a new password for a user.
@@ -174,7 +174,7 @@
 		elseif ($_GET['action'] == "Create User")
 		{
 			// If the admin wishes to create a new user
-			echo('<form action=admin/editUser.php?newUser=true method="POST">');
+			echo('<form action=editUser.php?newUser=true method="POST">');
 			if (isset($_GET['error']) && $_GET['error'] == 1)
 			{
 				// Print an error if the admin entered a username that already exists in the database
@@ -190,13 +190,13 @@
 		}
 		else
 		{
-			header("Location: admin/adminUsers.php");
+			header("Location: adminUsers.php");
 			// If for some reason no action has been set, go to the page where an action can be chosen
 		}
 	}
 	$conn->close();
 ?>
-<p><a href="admin/adminUsers.php">Return</a></p>
+<p><a href="adminUsers.php">Return</a></p>
 </div>
 </body>
 </html>

@@ -47,7 +47,7 @@
 	else
 	{
 		echo('<p>Choose a user to manage then select an option, or use the link below to change your password:</p>');
-		echo('<form action="admin/editUser.php" method="GET">');
+		echo('<form action="editUser.php" method="GET">');
 		echo('<select name="userSelection">');
 		// Prints a dropdown menu in a form which will send the user to be edited to editUser.php
 		$sql = $conn->prepare("SELECT user_id, username, is_admin FROM users WHERE user_id<>?");
@@ -77,14 +77,14 @@
 		echo('<input type="submit" name="action" value="Toggle Admin" /></p>');
 		// The three options for editing a user selected in the dropdown menu
 		echo('</form>');
-		echo('<p><a href=admin/editUser.php?action=Change+Password&userSelection=' . $_SESSION['userid'] . '>Change your Password</a></p>');
+		echo('<p><a href=editUser.php?action=Change+Password&userSelection=' . $_SESSION['userid'] . '>Change your Password</a></p>');
 		// An option for changing the logged in user's password
-		echo('<p><a href=admin/editUser.php?action=Create+User>Create New User</a></p>');
+		echo('<p><a href=editUser.php?action=Create+User>Create New User</a></p>');
 		// An option for creating a new user
 	}
 	$conn->close();
 ?>
-<p><a href="admin/adminHome.php">Return</a></p>
+<p><a href="adminHome.php">Return</a></p>
 </div>
 </body>
 </html>

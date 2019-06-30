@@ -168,9 +168,9 @@
 ?>
 
 <!-- These two links below execute the php code above -->
-<p><a href="admin/backup.php?action=save">Save Data</a></p>
-<p><a href="admin/backup.php?action=load">Load Data</a></p>
-<p><a href="admin/adminHome.php">Return</a></p>
+<p><a href="backup.php?action=save">Save Data</a></p>
+<p><a href="backup.php?action=load">Load Data</a></p>
+<p><a href="adminHome.php">Return</a></p>
 </div>
 </body>
 </html>

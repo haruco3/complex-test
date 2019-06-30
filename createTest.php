@@ -71,7 +71,7 @@
 		$sql->fetch();
 
 		// create the form, which posts the created questions and answers to saveTest.php
-		echo('<form action="admin/saveTest.php?question_sum=' . $_POST['count'] . '&create=true" method="POST">');
+		echo('<form action="saveTest.php?question_sum=' . $_POST['count'] . '&create=true" method="POST">');
 		echo('<p>Test Name:</p>');
 		echo('<p><input type="text" name="testName" /></p>');
 		$idArray = array();
@@ -94,7 +94,7 @@
 		// Saves an array of the IDs of the questions to be added as a session variable
 	}
 ?>
-<p><a href='admin/editTest.php?testSelection=create'>Return</a></p>
+<p><a href='editTest.php?testSelection=create'>Return</a></p>
 </div>
 </body>
 </html>

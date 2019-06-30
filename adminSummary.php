@@ -113,7 +113,7 @@
 	}
 	$conn->close();
 ?>
-<p><a href=admin/adminReview.php>Return</a></p>
+<p><a href=adminReview.php>Return</a></p>
 </div>
 </body>
 </html>

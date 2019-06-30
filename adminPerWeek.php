@@ -63,7 +63,7 @@
 	}
 ?>
 <p>How many test would you like students to do per week?</p>
-<form action=admin/adminPerWeek.php method="POST">
+<form action=adminPerWeek.php method="POST">
 <!-- This is a form where the user can choose a value for the tests per week -->
 <p><select name="perWeek">
 <option value="0">0</option>
@@ -79,7 +79,7 @@
 <option value="10">10</option></select>
 <input type="submit" value="Submit" /></p>
 </form>
-<p><a href="admin/adminHome.php">Return</a></p>
+<p><a href="adminHome.php">Return</a></p>
 </div>
 </body>
 </html>

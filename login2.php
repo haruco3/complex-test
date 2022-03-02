@@ -10,10 +10,10 @@ $name = $_POST['username'];
 $pass = $_POST['password'];
 // Gets username and password entered by user
 
-$servername = "localhost";
-$sqlUser = "root";
-$sqlPass = "";
-$dbname = "compnums";
+$servername = '';
+$sqlUser = '';
+$sqlPass = '';
+$dbname = '';
 // Database variables
 
 // Create connection
@@ -22,7 +22,15 @@ if($conn->connect_errno > 0){
     die('Unable to connect to database [' . $conn->connect_error . ']');
 }
 
-$sql = $conn->prepare('SELECT * FROM users WHERE username=? AND password=?');
+// Check db is initialised
+if (!$conn->query('SHOW TABLES LIKE \'users\';')->num_rows) {
+	require 'config.php';
+	init_db($conn);
+}
+
+$sql = $conn->prepare("SELECT * FROM users WHERE username=? AND password=?");
+if (!$sql)
+	die('Error: ' . $conn->error);
 $sql->bind_param('ss', $name, $pass);
 // Looks for user in database where username and password match those entered
 $sql->execute();

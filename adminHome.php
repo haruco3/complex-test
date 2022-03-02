@@ -44,7 +44,7 @@
 <p><a href="adminReview.php">Review Student Results</a></p>
 <p><a href="adminPerWeek.php">Set Tests per Week</a></p>
 <p><a href="backup.php">Backup</a></p>
-<p><a href="../logout.php">Logout</a></p>
+<p><a href="logout.php">Logout</a></p>
 </div>
 </body>
 </html>

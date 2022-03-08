@@ -5,6 +5,7 @@ function init_db(mysqli $conn) {
     CREATE TABLE IF NOT EXISTS `questions` (
         `question_id` int(11) NOT NULL DEFAULT '0',
         `test_id` int(11) DEFAULT NULL,
+        `question_type` int(11) NOT NULL DEFAULT '0',
         `question` varchar(100) DEFAULT NULL,
         `answer` varchar(100) DEFAULT NULL,
         PRIMARY KEY (`question_id`)
@@ -12,8 +13,8 @@ function init_db(mysqli $conn) {
     END);
     $conn->query(<<<END
     INSERT INTO `questions` (`question_id`, `test_id`, `question`, `answer`) VALUES
-        (0, 0, 'Is this the last question?', 'No'),
-        (1, 0, 'Is this the last question?', 'Yes');
+        (0, 0, 0, 'Is this the last question?', 'No'),
+        (1, 0, 0, 'Is this the last question?', 'Yes');
     END);
 
     $conn->query(<<<END
